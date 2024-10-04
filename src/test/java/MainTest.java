@@ -26,11 +26,19 @@ public class MainTest {
 
     @BeforeEach
     void setUp() {
-        bread = new Bread("Test", 10, "Test Bread");
-        chocolate = new Chocolate("Test", 10, "Test Chocolate");
-        coke = new Coke("Test", 10, "Test Coke");
+        // Bread constructor'ı, "Test", 10, "Test Bread", true (isWholeWheat parametresi)
+        bread = new Bread("Test", 10.0, "Test Bread", true);
+
+        // Chocolate constructor'ı, "Test", 10, "Test Chocolate", "Dark"
+        chocolate = new Chocolate("Test", 10.0, "Test Chocolate", "Dark");
+
+        // Coke constructor'ı, "Test", 10, "Test Coke", 500 (volume parametresi)
+        coke = new Coke("Test", 10.0, "Test Coke", 500);
+
+        // Troll constructor'ı, "Shrek", 1000, 100
         troll = new Troll("Shrek", 1000, 100);
     }
+
 
     @DisplayName("Subclasslar Superclass değişkenlerinin değerlerine ulaşabiliyor mu?")
     @Test
